@@ -51,13 +51,13 @@
                                     <!-- SEARCH BAR -->
                                     <div id="search-bar" class="p-3 d-flex bg-white align-items-center">
                                         <i class="fa-solid fa-magnifying-glass me-2 text-secondary"></i>
-                                        <input v-model="userSearchChat" placeholder="Cerca o inizia una nuova chat"
+                                        <input v-model="seekChat" placeholder="Cerca o inizia una nuova chat"
                                             class="w-100 border-0">
                                     </div>
                                     <!-- CONTACT SECTION -->
                                     <div class="contacts">
                                         <div class="contact" :class="(index === activeIndex) ? 'active' : ''"
-                                            v-for="contact, index in contacts" @click="changeContact(index)">
+                                            v-for="contact, index in contacts" @click="contactSwipe(index)">
                                             <img :src=`./img/avatar${contact.avatar}.jpg` :alt="contact.name"> {{
                                             contact.name }}
                                         </div>

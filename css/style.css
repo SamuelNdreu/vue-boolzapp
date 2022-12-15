@@ -66,6 +66,10 @@
     color: #91e1ff;
 }
 
+.m-size{
+    font-size: 1.3rem;
+}
+
 div.ring-ring{
     background-color: rgba(10, 166, 223, 0.763);
 }

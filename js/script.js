@@ -1,7 +1,7 @@
 createApp({
     data() {
         return {
-
+            activeIndex: 0,
             contacts: [
                 {
                     name: 'Michele',

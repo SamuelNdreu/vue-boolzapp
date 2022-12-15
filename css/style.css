@@ -57,3 +57,10 @@
     height: 60%;
     width: 80%;
 }
+
+div.ring-ring{
+    background-color: rgba(10, 166, 223, 0.763);
+}
+div.find-m{
+    background-color: #f4f2f2;
+}

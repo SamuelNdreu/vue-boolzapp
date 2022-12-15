@@ -28,6 +28,7 @@
                     <div class="col-12">
                         <div class="box d-flex">
                             <div class="box-contacts d-flex flex-column">
+                                <!-- USER INTERFACE WITH STORIES SECTION -->
                                 <header class="contacts-header d-flex align-items-center justify-content-between">
                                     <div class="avatar d-flex align-items-center">
                                         <img src="./img/avatar_io.jpg" alt="">
@@ -39,37 +40,41 @@
                                         <i class="fa-solid fa-ellipsis-vertical fa-2x p-2 me-3"></i>
                                     </div>
                                 </header>
-                                <div class="notifications d-flex align-items-center ring-ring mb-2 p-3">
-                                    <i class="fa-solid fa-bell-slash ms-3 ring-slash"></i>
-                                    <div class="box ms-3">
-                                        <p class="m-0 p-0 fw-bold">Ricevi notifiche di nuovi messaggi</p>
-                                        <a href="#" class="m-0 p-0">Attiva notifiche desktop</a>
+                                <!-- USER NOTIFICATIONS -->
+                                <div id="user-notifications" class="bg-light-blue d-flex p-3">
+                                    <i class="fa-solid fa-bell-slash fa-2x bg-white c-light-blue"></i>
+                                    <div class="text-wrapper ms-2">
+                                        <p class="mb-0">Ricevi notifiche di nuovi messaggi</p>
+                                        <a href="#" class="link-info">Attiva notifiche desktop</a>
                                     </div>
                                 </div>
-                                <div class="search d-flex align-items-center justify-content-center find-m ">
-                                    <i class="fa-solid fa-magnifying-glass p-2 me-5 bg-light"></i>
-                                    <input type="search" placeholder="Cerca o inizia nuova chat">
+                                <!-- SEARCH BAR -->
+                                <div id="search-bar" class="p-3 d-flex bg-white align-items-center">
+                                    <i class="fa-solid fa-magnifying-glass me-2 text-secondary"></i>
+                                    <input v-model="userSearchChat" placeholder="Cerca o inizia una nuova chat"
+                                        class="w-100 border-0">
                                 </div>
+                                <!-- CONTACT SECTION -->
                                 <div class="contacts">
 
                                 </div>
-                            </div>
-                            <div class="box-messages d-flex flex-column justify-content-between">
-                                <header class="messages-header">
-                                </header>
-                                <footer class="messages-footer d-flex justify-content-evenly align-items-center">
-                                    <i class="fa-regular fa-face-smile fa-2x"></i>
-                                    <input class="input-message" type="text" placeholder="Scrivi un messaggio">
-                                    <i class="fa-solid fa-microphone fa-2x"></i>
-                                </footer>
+
+                                <div class="box-messages d-flex flex-column justify-content-between">
+                                    <header class="messages-header">
+                                    </header>
+                                    <footer class="messages-footer d-flex justify-content-evenly align-items-center">
+                                        <i class="fa-regular fa-face-smile fa-2x"></i>
+                                        <input class="input-message" type="text" placeholder="Scrivi un messaggio">
+                                        <i class="fa-solid fa-microphone fa-2x"></i>
+                                    </footer>
+
+                                </div>
 
                             </div>
-
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
     </main>
     <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
     <script src="./js/script.js"></script>

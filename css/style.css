@@ -58,9 +58,25 @@
     width: 80%;
 }
 
+.bg-light-blue{
+    background-color: #91e1ff;
+}
+
+.c-light-blue{
+    color: #91e1ff;
+}
+
 div.ring-ring{
     background-color: rgba(10, 166, 223, 0.763);
 }
 div.find-m{
     background-color: #f4f2f2;
+}
+
+div#user-notifications i{
+    background-color: #8edafc ;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    padding: 11px;
 }

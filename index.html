@@ -40,41 +40,42 @@
                                         <i class="fa-solid fa-ellipsis-vertical fa-2x p-2 me-3"></i>
                                     </div>
                                 </header>
-                                <!-- USER NOTIFICATIONS -->
-                                <div id="user-notifications" class="bg-light-blue d-flex p-3">
-                                    <i class="fa-solid fa-bell-slash fa-2x bg-white c-light-blue"></i>
-                                    <div class="text-wrapper ms-2">
-                                        <p class="mb-0">Ricevi notifiche di nuovi messaggi</p>
-                                        <a href="#" class="link-info">Attiva notifiche desktop</a>
-                                    </div>
-                                </div>
-                                <!-- SEARCH BAR -->
-                                <div id="search-bar" class="p-3 d-flex bg-white align-items-center">
-                                    <i class="fa-solid fa-magnifying-glass me-2 text-secondary"></i>
-                                    <input v-model="userSearchChat" placeholder="Cerca o inizia una nuova chat"
-                                        class="w-100 border-0">
-                                </div>
-                                <!-- CONTACT SECTION -->
-                                <div class="contacts">
-
-                                </div>
-
-                                <div class="box-messages d-flex flex-column justify-content-between">
-                                    <header class="messages-header">
-                                    </header>
-                                    <footer class="messages-footer d-flex justify-content-evenly align-items-center">
-                                        <i class="fa-regular fa-face-smile fa-2x"></i>
-                                        <input class="input-message" type="text" placeholder="Scrivi un messaggio">
-                                        <i class="fa-solid fa-microphone fa-2x"></i>
-                                    </footer>
-
-                                </div>
-
+                        <!-- USER NOTIFICATIONS -->
+                        <div id="user-notifications" class="bg-light-blue d-flex p-3">
+                            <i class="fa-solid fa-bell-slash fa-2x bg-white c-light-blue"></i>
+                            <div class="text-wrapper ms-2">
+                                <p class="mb-0">Ricevi notifiche di nuovi messaggi</p>
+                                <a href="#" class="link-info">Attiva notifiche desktop</a>
                             </div>
+                        </div>
+                        <!-- SEARCH BAR -->
+                        <div id="search-bar" class="p-3 d-flex bg-white align-items-center">
+                            <i class="fa-solid fa-magnifying-glass me-2 text-secondary"></i>
+                            <input v-model="userSearchChat" placeholder="Cerca o inizia una nuova chat" class="w-100 border-0">
+                        </div>
+                        <!-- CONTACT SECTION -->
+                        <div class="contacts">
+
+                        </div>
+                    </div>
+                    <!-- BOX MESSAGE -->
+                        <div class="box-messages d-flex flex-column justify-content-between">
+                            <header class="messages-header">
+
+                            </header>
+                            <footer class="messages-footer d-flex justify-content-evenly align-items-center">
+                                <i class="fa-regular fa-face-smile fa-2x"></i>
+                                <input class="input-message" type="text" placeholder="Scrivi un messaggio">
+                                <i class="fa-solid fa-microphone fa-2x"></i>
+                            </footer>
+
+                        </div>
+
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
     </main>
     <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
     <script src="./js/script.js"></script>

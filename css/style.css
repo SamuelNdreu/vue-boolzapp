@@ -43,10 +43,12 @@
     margin-right: 0.5rem;
 }
 
-.icons-contacts {
+.icons-contacts,
+.icons-messages {
     color: #b1b1b1;
 
 }
+
 
 .messages-footer {
     height: 5rem;
@@ -58,27 +60,60 @@
     width: 80%;
 }
 
-.bg-light-blue{
+.contacts .contact {
+    height: 5rem;
+    /* background-color: #13ff02; */
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #f7f7f7;
+}
+
+.contact img {
+    height: 4rem;
+    border-radius: 50%;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.active {
+    background-color: #e9ebeb;
+}
+
+.sent {
+    background-color: #d5f9ba;
+    border-radius: 4px;
+    width: 40%;
+}
+
+.received {
+    background-color: #ffffff;
+    border-radius: 4px;
+    width: 40%;
+}
+
+
+.bg-light-blue {
     background-color: #91e1ff;
 }
 
-.c-light-blue{
+.c-light-blue {
     color: #91e1ff;
 }
 
-.m-size{
+.m-size {
     font-size: 1.3rem;
 }
 
-div.ring-ring{
+div.ring-ring {
     background-color: rgba(10, 166, 223, 0.763);
 }
-div.find-m{
+
+div.find-m {
     background-color: #f4f2f2;
 }
 
-div#user-notifications i{
-    background-color: #8edafc ;
+div#user-notifications i {
+    background-color: #8edafc;
     width: 60px;
     height: 60px;
     border-radius: 50%;

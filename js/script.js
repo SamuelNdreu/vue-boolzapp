@@ -167,5 +167,11 @@ createApp({
             ]
 
         }
+    },
+
+    methods: {
+        changeContact (index){
+            this.activeIndex = index;
+        }
     }
 }).mount('#app')

@@ -172,7 +172,7 @@ createApp({
     },
 
     methods: {
-        changeContact (index){
+        contactSwipe (index){
             this.activeIndex = index;
         }
     }

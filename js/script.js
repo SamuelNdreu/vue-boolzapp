@@ -189,17 +189,21 @@ createApp({
     },
 
         sendMessage() {
-            let newObj = {
-                date: this.today,
-                message: this.newMessage,
-                status: 'sent'
+            let newObject = {
+                name: this.activeIndex,
+                avatar: this.activeIndex,
+                visible: this.activeIndex,
+                messages: [
+                    {
+                        date: Date,
+                        message: this.newMessage,
+                        status: 'sent'
+                    }
+                ],
             }
-            this.contacts[this.activeIndex].messages.push(newObj);
+            this.contacts.push(newObject);
             this.newMessage = '';
-            setTimeout(() => {
-                this.receiveMessage()
-            }, 1000);
-        },    
+        }        
 
 
     }).mount('#app')

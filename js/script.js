@@ -3,7 +3,7 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
-            userSearchChat : '',
+            userSearchChat: '',
             activeIndex: 0,
             contacts: [
                 {
@@ -173,8 +173,33 @@ createApp({
     },
 
     methods: {
-        contactSwipe (index){
+        changeContact(index) {
             this.activeIndex = index;
+        },
+        receiveMessage() {
+            let newObj = {
+                date: this.today,
+                message: 'Ok',
+                status: 'received'
+            }
+            this.contacts[this.activeIndex].messages.push(newObj);
+            this.newMessage = '';
+
         }
-    }
-}).mount('#app')
+    },
+
+        sendMessage() {
+            let newObj = {
+                date: this.today,
+                message: this.newMessage,
+                status: 'sent'
+            }
+            this.contacts[this.activeIndex].messages.push(newObj);
+            this.newMessage = '';
+            setTimeout(() => {
+                this.receiveMessage()
+            }, 1000);
+        },    
+
+
+    }).mount('#app')

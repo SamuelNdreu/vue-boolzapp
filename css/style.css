@@ -1,3 +1,8 @@
+body{
+    font-family: 'Lato', sans-serif;
+
+}
+
 .main-wrapper {
     height: 100vh;
     background-color: #d9dbd4;
@@ -50,6 +55,25 @@
 
 }
 
+.notifications {
+    background-color: #8edafc;
+    height: 6rem;
+}
+.notifications i {
+    color: #8edafc;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 50%;
+}
+
+.notifications .box a {
+    color: #6d7b84;
+    font-size: 0.8rem;
+}
+.search {
+    height: 3rem;
+    background-color: #fafafa;
+}
 
 .messages-footer {
     height: 5rem;
@@ -60,6 +84,10 @@
     height: 60%;
     width: 80%;
 }
+
+.messages-footer i {
+    color: #60656b;
+}  
 
 .contacts .contact {
     height: 4.6rem;
@@ -76,7 +104,9 @@
     margin-left: 0.5rem;
     margin-right: 0.5rem;
 }
-
+.my_display {
+    display: inline-block;
+}
 
 .active {
     background-color: #e9ebeb;
@@ -86,14 +116,19 @@
     background-color: #d5f9ba;
     border-radius: 4px;
     width: 40%;
+    margin-left: 50%;
+    margin-bottom: 0.5rem;
+    padding: 1rem 0.5rem;
 }
 
 .received {
     background-color: #ffffff;
     border-radius: 4px;
     width: 40%;
+    margin-left: 10%;
+    margin-bottom: 0.5rem;
+    padding: 1rem 0.5rem;
 }
-
 
 .bg-light-blue {
     background-color: #91e1ff;

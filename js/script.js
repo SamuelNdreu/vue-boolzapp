@@ -1,9 +1,10 @@
 const { createApp } = Vue
-
 createApp({
     data() {
         return {
-            userSearchChat: '',
+            search: '',
+            today: new Date().toLocaleString(),
+            newMessage: '',
             activeIndex: 0,
             contacts: [
                 {
@@ -168,10 +169,8 @@ createApp({
                     ],
                 }
             ]
-
         }
     },
-
     methods: {
         changeContact(index) {
             this.activeIndex = index;
@@ -184,26 +183,31 @@ createApp({
             }
             this.contacts[this.activeIndex].messages.push(newObj);
             this.newMessage = '';
-
-        }
-    },
-
+        },
         sendMessage() {
-            let newObject = {
-                name: this.activeIndex,
-                avatar: this.activeIndex,
-                visible: this.activeIndex,
-                messages: [
-                    {
-                        date: Date,
-                        message: this.newMessage,
-                        status: 'sent'
-                    }
-                ],
+            if (this.newMessage != '') {
+                let newObj = {
+                    date: this.today,
+                    message: this.newMessage,
+                    status: 'sent'
+                }
+                this.contacts[this.activeIndex].messages.push(newObj);
+                this.newMessage = '';
+                setTimeout(() => {
+                    this.receiveMessage()
+                }, 1000);
             }
-            this.contacts.push(newObject);
-            this.newMessage = '';
-        }        
+        },
+        filterContacts() {
+            for (let i = 0; i < this.contacts.length; i++) {
+                const element = this.contacts[i];
+                if (element.name.toLowerCase().includes(this.search.toLowerCase())) {
+                    element.visible = true
+                } else {
+                    element.visible = false
+                }
+            }
+        },
 
-
-    }).mount('#app')
+    }
+}).mount('#app')

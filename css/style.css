@@ -161,7 +161,13 @@ body{
     color: #bac2d7;
     text-align: end;
 }
-  
+
+.delete-message-box {
+    height: 3rem;
+    width: 180px;
+    background-color: white;
+    padding: 1rem
+}
 
 div.ring-ring {
     background-color: rgba(10, 166, 223, 0.763);

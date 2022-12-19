@@ -55,7 +55,7 @@
                                     <!-- SEARCH BAR -->
                                     <div id="search-bar" class="p-3 d-flex bg-white align-items-center">
                                         <i class="fa-solid fa-magnifying-glass me-2 text-secondary"></i>
-                                        <input v-model="seekChat" placeholder="Cerca o inizia una nuova chat"
+                                        <input v-model="search"  @keyup.enter="filterContacts()" placeholder="Cerca o inizia una nuova chat"
                                             class="w-100 border-0">
                                     </div>
                                     <!-- CONTACT SECTION -->
@@ -85,13 +85,17 @@
                                         </div>
                                     </header>
                                     <!-- CHAT SECTION =*** MILESTONE 3 *** -->
-                                    <main class="messages-main" v-for="contact, index in contacts"
+                                    <main class="message dropdown-toggle" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" v-for="contact, index in contacts"
                                         :class="(index === activeIndex) ? 'seekforme' : 'd-none'">
                                         <div class="message" v-for="child, index in contact.messages"
                                             :class="(child.status === 'sent') ? 'sent' : 'received'">
                                             {{ child.message }} <br />
                                             <span class="grey-lo">{{ child.date }}</span>
                                         </div>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                            <li><a class="dropdown-item" href="#" @click="deleteMessage()">Cancella Messaggio</a></li>
+                                          <!-- <div class="delete-message-box d-none"><p class="p-0 m-0" @click="deleteMessage()">Cancella Messaggio</p></div> -->
+                    
                                     </main>
                                     <!-- FOOTER MAIN INPUT MESSAGE SECTION -->
                                     <footer class="messages-footer d-flex justify-content-evenly align-items-center">

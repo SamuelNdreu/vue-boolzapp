@@ -1,3 +1,4 @@
+const DateTime = luxon.DateTime;
 const { createApp } = Vue
 createApp({
     data() {

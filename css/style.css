@@ -24,6 +24,7 @@ body{
     height: 90vh;
     width: 65%;
     background-image: url(../img/mine.jpg);
+    background-size: cover;
 
     margin-top: 5vh;
 }
@@ -121,7 +122,7 @@ body{
     width: 40%;
     margin-left: 57%;
     margin-bottom: 1.5rem;
-    padding: 1rem 0.5rem;
+    padding: 0.5rem 0.5rem;
 }
 
 .received {
@@ -130,7 +131,7 @@ body{
     width: 39%;
     margin-left: 5%;
     margin-bottom: 1.5rem;
-    padding: 1rem 0.5rem;
+    padding: 0.5rem 0.5rem;
 }
 
 .sent,

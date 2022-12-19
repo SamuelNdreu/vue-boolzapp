@@ -215,7 +215,7 @@ createApp({
             }
         },
 
-        deleteMessage() {
+        deleteMessageBox() {
             this.contacts[this.activeIndex].messages.splice(this.message, 1)
         }
 

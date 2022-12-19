@@ -66,7 +66,7 @@
                                         v-for="contact, index in contacts"
                                         @click="changeContact(index)">
                                         <img :src=`./img/avatar${contact.avatar}.jpg`
-                                        :alt="contact.name"> {{ contact.name }}                                
+                                        :alt="contact.name"> {{ contact.name }}                              
                                         </div>
                                     </div>    
                                 </div>
@@ -90,10 +90,12 @@
                                         <div class="message" v-for="child, index in contact.messages"
                                             :class="(child.status === 'sent') ? 'sent' : 'received'"@click="">
                                             {{ child.message }}
-                                            <p class="grey-lo">{{ child.date }}</p>
+                                            <p class="grey-lo p-0 m-0"
+                                            >{{ child.date }}</p
+                                          >
+                  
                                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                                                 <li><a class="dropdown-item" href="#" @click="deleteMessageBox()">Cancella aMessaggio</a></li>    
-
                                         </div>                                        
                                         <!-- <div class="delete-message-box d-none"><p class="p-0 m-0" @click="deleteMessageBox()">Cancella Messaggio</p></div> -->
                     

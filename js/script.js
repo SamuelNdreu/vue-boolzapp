@@ -201,7 +201,7 @@ createApp({
                 this.contacts[this.activeIndex].messages.push(newObj);
                 this.newMessage = '';
                 setTimeout(() => {
-                    this.receiveMessage()
+                    this.receiveMessage();
                 }, 1000);
             }
         },
@@ -209,16 +209,21 @@ createApp({
             for (let i = 0; i < this.contacts.length; i++) {
                 const element = this.contacts[i];
                 if (element.name.toLowerCase().includes(this.search.toLowerCase())) {
-                    element.visible = true
+                    element.visible = true;
                 } else {
-                    element.visible = false
+                    element.visible = false;
                 }
             }
         },
 
+        selectedMessage(index) {
+            this.messageIndex = index;
+        },
+
+
         deleteMessageBox() {
-            this.contacts[this.activeIndex].messages.splice(this.message, 1)
-        }
+            this.contacts[this.activeIndex].messages.splice(this.message, 1);
+        },
 
     }
 

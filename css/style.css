@@ -122,9 +122,9 @@ body {
 .sent {
     background-color: #d5f9ba;
     border-radius: 9px;
-    width: 40%;
-    margin-left: 57%;
-    margin-bottom: 1.5rem;
+    width: 43%;
+    margin-left: 50%;
+    margin-bottom: 2.5rem;
     padding: 0.5rem 0.5rem;
 }
 
@@ -133,7 +133,7 @@ body {
     border-radius: 4px;
     width: 39%;
     margin-left: 5%;
-    margin-bottom: 1.5rem;
+    
     padding: 0.5rem 0.5rem;
 }
 
@@ -185,3 +185,15 @@ div#user-notifications i {
     border-radius: 50%;
     padding: 11px;
 }
+
+div.contacts{
+    cursor: pointer;
+}
+
+.dropdown-menu{
+    position: absolute !important;
+    top: -81% !important;
+    left: 78% !important;
+    
+
+}   

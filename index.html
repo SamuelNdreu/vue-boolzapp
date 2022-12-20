@@ -95,9 +95,9 @@
                                             :class="(child.status === 'sent') ? 'sent' : 'received'"@click="">
                                             {{ child.message }}
                                             <p class="grey-lo p-0 m-0"
-                                            >{{ child.date }}</p>
-                                            <ul class="dropdown-menu position-absolute" aria-labelledby="dropdownMenuButton1">
-                                                <li><a class="dropdown-item" href="#" @click="deleteMessageBox()">Cancella aMessaggio</a></li>    
+                                            >{{ child.date }}</p>                                          
+                                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                    <li><a class="dropdown-item grey-lo" href="#" @click="deleteMessageBox()">Cancella aMessaggio</a></li>                                           
                                         </div>                                                           
                                     </main>
                                     <!-- FOOTER MAIN INPUT MESSAGE SECTION -->

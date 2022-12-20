@@ -61,12 +61,16 @@
                                     <!-- CONTACT SECTION -->
                                     <div class="contacts">
                                         <div
-                                        class="contact"
+                                        class="contact d-flex"
                                         :class="[(index === activeIndex) ? 'active' : '', contact.visible ? '' : 'd-none']"
                                         v-for="contact, index in contacts"
                                         @click="changeContact(index)">
                                         <img :src=`./img/avatar${contact.avatar}.jpg`
-                                        :alt="contact.name"> {{ contact.name }}                              
+                                        :alt="contact.name"> 
+                                            <div class="d-flex flex-column">
+                                                <p class="p-0 m-0">{{ contact.name }}</p>
+                                                <p class="p-0 m-0 grey-lo">{{ contact.messages[contact.messages.length - 1].date }} </p> 
+                                            </div>
                                         </div>
                                     </div>    
                                 </div>
@@ -85,20 +89,16 @@
                                         </div>
                                     </header>
                                     <!-- CHAT SECTION =*** MILESTONE 3+5 *** -->
-                                    <main class="message dropdown-toggle" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" v-for="contact, index in contacts"
-                                        :class="(index === activeIndex) ? 'seekforme' : 'd-none'">
+                                    <main class="message dropdown-toggle position-relative" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" v-for="contact, index in contacts"
+                                        :class="(index === activeIndex) ? 'seekforme' : 'd-none'">                                       
                                         <div class="message" v-for="child, index in contact.messages"
                                             :class="(child.status === 'sent') ? 'sent' : 'received'"@click="">
                                             {{ child.message }}
                                             <p class="grey-lo p-0 m-0"
-                                            >{{ child.date }}</p
-                                          >
-                  
-                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                            >{{ child.date }}</p>
+                                            <ul class="dropdown-menu position-absolute" aria-labelledby="dropdownMenuButton1">
                                                 <li><a class="dropdown-item" href="#" @click="deleteMessageBox()">Cancella aMessaggio</a></li>    
-                                        </div>                                        
-                                        <!-- <div class="delete-message-box d-none"><p class="p-0 m-0" @click="deleteMessageBox()">Cancella Messaggio</p></div> -->
-                    
+                                        </div>                                                           
                                     </main>
                                     <!-- FOOTER MAIN INPUT MESSAGE SECTION -->
                                     <footer class="messages-footer d-flex justify-content-evenly align-items-center">

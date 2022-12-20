@@ -166,11 +166,8 @@ body {
     text-align: end;
 }
 
-.delete-message-box {
-    height: 3rem;
-    width: 180px;
-    background-color: white;
-    padding: 1rem
+.dropdown-menu{
+    top:30px;
 }
 
 div.ring-ring {

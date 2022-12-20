@@ -174,6 +174,8 @@ createApp({
                             status: 'received'
                         }
                     ],
+
+                    dateIndex: 0,
                 }
             ]
         }
